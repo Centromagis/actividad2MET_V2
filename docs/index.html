@@ -269,758 +269,659 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore"><span style="color:#034a94">
+<h1 class="title toc-ignore"><span style="color:#686868">
 <strong>Actividad 2</strong></span></h1>
 <h4 class="author">Métodos y Simulación Estadística</h4>
 
 </div>
 
 
-<p><img src="img/banner3.png" width="100%" style="display: block; margin: auto;" /></p>
-<p>La simulación es una herramienta poderosa en estadística, útil para
-comprender relaciones complejas y estimar valores difíciles de calcular
-directamente. Para ilustrar su aplicación, se plantean los siguientes
-problemas:</p>
-<p></br></br></p>
-<div id="problema-1" class="section level1">
-<h1><span style="color:#034a94"> <strong>Problema 1</strong></span></h1>
-<p><br/></p>
-<div id="estimación-de-la-probabilidad-y-la-media"
-class="section level2">
-<h2><span style="color:#FF7F00"><strong>Estimación de la Probabilidad y
-la Media</strong></span></h2>
-<p>Una empresa de servicio técnico recibe, en promedio, <strong>5
-solicitudes de reparación por hora</strong>. Suponiendo que el
-<em>número de solicitudes</em> sigue una <strong>distribución de
-Poisson</strong>, realiza las siguientes actividades:</p>
+<p><img src="img/banner2.png" width="100%" style="display: block; margin: auto;" /></p>
+<p></br></br> La simulación es una herramienta poderosa en estadística,
+útil para comprender relaciones complejas y estimar valores difíciles de
+calcular directamente. Para ilustrar su aplicación, se plantean los
+siguientes problemas:</p>
+</br></br>
+<h2>
+Problemas
+</h2>
+</br></br>
+<h3>
+Problema 1: Estimación de la probabilidad y la media
+</h3>
+<p>Una empresa de servicio técnico recibe, en promedio, 5 solicitudes de
+reparación por hora. Suponiendo que el número de solicitudes sigue una
+distribución de Poisson, realiza las siguientes actividades:</p>
 <ol style="list-style-type: lower-alpha">
 <li><p>Cálculo de probabilidad teórica:</p>
 <ul>
-<li>Calcula la probabilidad de que en una hora lleguen exactamente
-<strong>3 solicitudes</strong> usando la fórmula de la distribución de
-Poisson. Expresa el resultado como <span
-class="math inline">\(P(X=3)\)</span>.</li>
+<li>Calcula la probabilidad de que en una hora lleguen exactamente 3
+solicitudes usando la fórmula de la distribución de Poisson. Expresa el
+resultado como <span class="math inline">\(P(X=3)\)</span>.</li>
 </ul></li>
 <li><p>Simulación con una muestra:</p>
 <ul>
-<li>Genera una muestra aleatoria de tamaño <strong>n = 1000</strong> con
-<code>rpois(n, lambda = 5)</code>.</li>
-<li>Calcula la frecuencia relativa para <span
+<li><p>Genera una muestra aleatoria de tamaño <span
+class="math inline">\(n=1,000\)</span> con
+<code>rpois(n, lambda = 5)</code>.</p></li>
+<li><p>Calcula la frecuencia relativa para <span
 class="math inline">\(X=3\)</span> (<span
-class="math inline">\(f_n(X=3)\)</span>).</li>
-<li>Compara e interpreta el resultado frente a la probabilidad
-teórica.</li>
+class="math inline">\(f_n(X=3)\)</span>).</p></li>
+<li><p>Compara e interpreta el resultado frente a la probabilidad
+teórica.</p></li>
 </ul></li>
 <li><p>Análisis de la variabilidad entre muestras:</p>
 <ul>
-<li>Genera <strong>100 muestras aleatorias</strong> de tamaño <strong>n
-= 1000</strong>.</li>
-<li>Calcula la frecuencia relativa para <span
-class="math inline">\(X=3\)</span> en cada muestra.</li>
-<li>Construye un gráfico de dispersión:
+<li><p>Genera 100 muestras aleatorias de tamaño <span
+class="math inline">\(n=1,000\)</span>.</p></li>
+<li><p>Calcula la frecuencia relativa para <span
+class="math inline">\(X=3\)</span> en cada muestra.</p></li>
+<li><p>Construye un gráfico de dispersión:</p>
 <ul>
-<li><strong>Eje X:</strong> Indexación por cada muestra (1 a 100).</li>
-<li><strong>Eje Y:</strong> Frecuencias relativas <span
-class="math inline">\(f_n(X=3)\)</span>.</li>
+<li><p>Eje <span class="math inline">\(X\)</span>: Indexación por cada
+muestra (1 a 100).</p></li>
+<li><p>Eje <span class="math inline">\(Y\)</span>: Frecuencias relativas
+<span class="math inline">\(f_n(X=3)\)</span>.</p></li>
 </ul></li>
-<li>Dibuja una línea horizontal en <span
+<li><p>Dibuja una línea horizontal en <span
 class="math inline">\(P(X=3)\)</span> y comenta si existe una
-tendencia.</li>
+tendencia.</p></li>
 </ul></li>
 <li><p>Impacto del tamaño muestral:</p>
 <ul>
-<li>Genera <strong>muestras aleatorias</strong> con tamaños: 5, 10, 20,
-30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900,
-1000.</li>
-<li>Calcula la frecuencia relativa de <span
-class="math inline">\(X=3\)</span> para cada tamaño.</li>
-<li>Construye un gráfico de dispersión:
+<li><p>Genera muestras aleatorias con tamaños: 5, 10, 20, 30, 40, 50,
+60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900 y 1,000.
+Agrega valores si consideras que mejora el análisis de los
+resultados.</p></li>
+<li><p>Calcula la frecuencia relativa de <span
+class="math inline">\(X=3\)</span> para cada tamaño.</p></li>
+<li><p>Construye un gráfico de dispersión:</p>
 <ul>
-<li><strong>Eje X:</strong> Indexación (1 al 20) por cada tamaño
-muestral.</li>
-<li><strong>Eje Y:</strong> Frecuencias relativas <span
-class="math inline">\(f_n(X=3)\)</span>.</li>
+<li><p>Eje <span class="math inline">\(X\)</span>: Indexación (1 al 20)
+por cada tamaño muestral.</p></li>
+<li><p>Eje <span class="math inline">\(Y\)</span>: Frecuencias relativas
+<span class="math inline">\(f_n(X=3)\)</span>.</p></li>
 </ul></li>
-<li>Dibuja la línea en <span class="math inline">\(P(X=3)\)</span> y
-describe si aparece una tendencia.</li>
+<li><p>Dibuja la línea en <span class="math inline">\(P(X=3)\)</span> y
+describe si aparece una tendencia.</p></li>
 </ul></li>
 <li><p>Convergencia de la media muestral:</p>
 <ul>
-<li>Genera <strong>100 muestras</strong> de tamaño <strong>n =
-1000</strong>.</li>
-<li>Calcula el promedio muestral de solicitudes en cada muestra.</li>
-<li>Construye un gráfico de dispersión:
+<li><p>Genera 100 muestras de tamaño <span
+class="math inline">\(n=1,000\)</span>.</p></li>
+<li><p>Calcula el promedio muestral de solicitudes en cada
+muestra.</p></li>
+<li><p>Construye un gráfico de dispersión:</p>
 <ul>
-<li><strong>Eje X:</strong> Indexación por cada muestra (1 a 100).</li>
-<li><strong>Eje Y:</strong> Promedios muestrales.</li>
+<li><p>Eje <span class="math inline">\(X\)</span>: Indexación por cada
+muestra (1 a 100).</p></li>
+<li><p>Eje <span class="math inline">\(Y\)</span>: Promedios
+muestrales.</p></li>
 </ul></li>
-<li>Traza la línea horizontal en la media teórica (<span
-class="math inline">\(\lambda\)</span>) y analiza la tendencia.</li>
+<li><p>Traza la línea horizontal en la media teórica (<span
+class="math inline">\(\lambda\)</span>) y analiza la tendencia.</p></li>
 </ul></li>
 <li><p>Impacto del tamaño muestral en la media:</p>
 <ul>
-<li>Genera <strong>muestras aleatorias</strong> con tamaños: 5, 10, 20,
-30, 40, 50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900,
-1000.</li>
-<li>Calcula el promedio muestral para cada tamaño.</li>
-<li>Construye un gráfico de dispersión:
+<li><p>Genera muestras aleatorias con tamaños: 5, 10, 20, 30, 40, 50,
+60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800, 900 y 1,000.
+Agrega valores si consideras que mejora el análisis de los
+resultados.</p></li>
+<li><p>Calcula el promedio muestral para cada tamaño.</p></li>
+<li><p>Construye un gráfico de dispersión:</p>
 <ul>
-<li><strong>Eje X:</strong> Indexación (1 al 20) por cada tamaño
-muestral.</li>
-<li><strong>Eje Y:</strong> Promedios muestrales.</li>
+<li><p>Eje <span class="math inline">\(X\)</span>: Indexación (1 al 20)
+por cada tamaño muestral.</p></li>
+<li><p>Eje <span class="math inline">\(Y\)</span>: Promedios
+muestrales.</p></li>
 </ul></li>
-<li>Dibuja la línea horizontal en la media teórica (<span
+<li><p>Dibuja la línea horizontal en la media teórica (<span
 class="math inline">\(\lambda\)</span>) y compara si el promedio se
-aproxima a medida que crece el tamaño.</li>
+aproxima a medida que crece el tamaño.</p></li>
 </ul></li>
 </ol>
-<p><br/><br/></p>
-<div id="condiciones-de-entrega"
-class="section level3 content-box-gray">
-<h3><span style="color:#686868"><strong>Condiciones de
-entrega</strong></span></h3>
-<ul>
-<li><p>La solución se debe presentar en un archivo HTML generado
-mediante RMarkdown (.Rmd).</p></li>
-<li><p>Responde a los ejercicios en orden (de la <strong>a</strong>
-hasta la <strong>f</strong>).</p></li>
-<li><p>Por cada ejercicio, incluye:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Código R:</strong> Con comentarios explicativos.</li>
-<li><strong>Gráficos y cálculos:</strong> Según lo solicitado.</li>
-<li><strong>Interpretación:</strong> Explicación clara de los resultados
-obtenidos.</li>
-</ol></li>
-<li><p>El archivo <code>.Rmd</code> y el HTML generado deben entregarse
-juntos.</p></li>
-<li><p>Establece la semilla con tu código de estudiante:
-<code>set.seed(codigo)</code>.</p></li>
-<li><p>Asegúrate de que todos los códigos compilen correctamente antes
-de la entrega.</p></li>
-</ul>
-</div>
-<p></br></br></br></p>
-</div>
-</div>
-<div id="problema-2" class="section level1">
-<h1><span style="color:#034a94"> <strong>Problema 2</strong></span></h1>
-<p></br></p>
-<div id="propiedades-de-los-estimadores" class="section level2">
-<h2><span style="color:#FF7F00"><strong>Propiedades de los
-Estimadores</strong></span></h2>
+<hr />
+</br></br>
+<h3>
+Problema 2: Propiedades de los estimadores
+</h3>
 <p>Un centro de atención médica registra el tiempo de espera (en
 minutos) de los pacientes antes de ser atendidos. Se sabe que estos
-tiempos siguen una <strong>distribución Gamma</strong> con parámetros
-conocidos <span class="math inline">\(\alpha = 3\)</span> (forma) y
-<span class="math inline">\(\beta = 2\)</span> (escala). El parámetro
-que se supone desconocido en este problema es la media poblacional <span
-class="math inline">\(\theta = \alpha \beta\)</span>.</p>
+tiempos siguen una distribución Gamma con parámetros conocidos <span
+class="math inline">\(\alpha = 3\)</span> (forma) y <span
+class="math inline">\(\sigma = 2\)</span> (escala). El parámetro que se
+supone desconocido en este problema es la media poblacional <span
+class="math inline">\(\mu = \alpha \sigma\)</span>.</p>
 <p>Sea <span class="math inline">\(X_{1}, X_{2}, \dots, X_{n}\)</span>
 una muestra aleatoria de tamaño <span class="math inline">\(n\)</span>
 independiente e identicamente distribuida extraída de esta población. Se
 proponen los siguientes estimadores para <span
-class="math inline">\(\theta\)</span>:</p>
+class="math inline">\(\mu\)</span>:</p>
 <ol style="list-style-type: decimal">
-<li><p><strong>Estimador de la media muestral:</strong><br />
-<span class="math display">\[ \widehat{\theta_1} = \frac{1}{n}
+<li><p>Estimador 1:</p>
+<p><span class="math display">\[ \widehat{\mu}_1 = \frac{1}{n}
 \sum_{i=1}^{n} X_{i} \]</span></p></li>
-<li><p><strong>Estimador basado en el rango:</strong><br />
-<span class="math display">\[ \widehat{\theta_2} = \frac{\min(X_{1},
+<li><p>Estimador 2:</p>
+<p><span class="math display">\[ \widehat{\mu}_2 = \frac{\min(X_{1},
 \dots, X_{n}) + \max(X_{1}, \dots, X_{n})}{2} \]</span></p></li>
+<li><p>Estimador 3:</p>
+<p><span class="math display">\[ \widehat{\mu}_3 = X_{(1)}
+\]</span></p></li>
+<li><p>Estimador 4:</p></li>
 </ol>
+<p><span class="math display">\[ \widehat{\mu}_4 = \frac{1}{n+1}
+\sum_{i=1}^{n} X_{i} \]</span></p>
 <p>Realiza las siguientes actividades:</p>
 <ol style="list-style-type: lower-alpha">
 <li><p>Simulación de estimadores:</p>
 <ul>
-<li>Genera <strong>100 muestras</strong> de tamaño <span
-class="math inline">\(n = 10\)</span> de una <strong>distribución
-Gamma</strong> con parámetros <span class="math inline">\(\alpha =
-3\)</span> y <span class="math inline">\(\beta = 2\)</span>. Para cada
-muestra, calcula los estimadores correspondientes. Luego, grafica los
-resultados utilizando una curva de densidad o un histograma de
-densidades para cada estimador. Realiza una interpretación de los
-gráficos obtenidos. Utiliza la función
-<code>rgamma(n, shape = alpha, scale = beta)</code> de
-<strong>R</strong> y establece una semilla <code>set.seed(123)</code>
-para asegurar la reproducibilidad de los resultados. Como valor</li>
+<li><p>Genera 100 muestras de tamaño <span class="math inline">\(n =
+10\)</span> de una distribución Gamma con parámetros <span
+class="math inline">\(\alpha = 3\)</span> y <span
+class="math inline">\(\sigma = 2\)</span>. Utiliza la función
+<code>rgamma(n, shape = alpha, scale = sigma)</code> de
+<strong>R</strong> y establece una semilla como por ejemplo
+<code>set.seed(123)</code> para asegurar la reproducibilidad de los
+resultados.</p></li>
+<li><p>Para cada muestra, calcula los estimadores correspondientes.
+Luego, grafica los resultados utilizando una curva de densidad o un
+histograma de densidades para cada estimador.</p></li>
+<li><p>Realiza una interpretación de los gráficos obtenidos.</p></li>
 </ul></li>
 <li><p>Insesgadez:</p>
 <ul>
-<li>Mediante una simulación computacional, estima la media de cada
-estimador y compárala con el valor verdadero de la media, <span
-class="math inline">\(\theta = 6\)</span>. Realiza un análisis
-utilizando gráficos y las estadísticas pertinentes para determinar cuál
-de los estimadores es el menos sesgado.</li>
+<li><p>Mediante una simulación computacional, estima la media de cada
+estimador y compárala con el valor verdadero de la media de la
+población.</p></li>
+<li><p>Realiza un análisis utilizando gráficos y las estadísticas
+pertinentes para determinar cuál de los estimadores es el menos
+sesgado.</p></li>
 </ul></li>
 <li><p>Consistencia:</p>
 <ul>
-<li>Mediante una simulación computacional, incrementa el tamaño muestral
-desde <strong>n = 10</strong> hasta <strong>n = 1000</strong>,
-utilizando un conjunto de valores representativos como 5, 10, 20, 30,
-50, 60, 70, 80, 90, 100, 200, 300, 400, 500, 600, entre otros. Grafica
-cómo varía la variabilidad relativa de los estimadores a medida que
-aumenta el tamaño muestral. Realiza un análisis utilizando gráficos y
-las estadísticas necesarias para evaluar la consistencia de los
-estimadores.</li>
+<li><p>Mediante una simulación computacional, incrementa el tamaño
+muestral desde <span class="math inline">\(n= 10\)</span> hasta <span
+class="math inline">\(n= 1,000\)</span>, utilizando un conjunto de
+valores representativos como 5, 10, 20, 30, 50, 60, 70, 80, 90, 100,
+200, 300, 400, 500, 600, entre otros. Grafica cómo cambia la
+variabilidad relativa de los estimadores a medida que aumenta el tamaño
+muestral.</p></li>
+<li><p>Realiza un análisis utilizando gráficos y las estadísticas
+necesarias para evaluar la consistencia de los estimadores.</p></li>
 </ul></li>
 <li><p>Eficiencia:</p>
 <ul>
-<li>Mediante una simulación computacional, calcula la varianza muestral
-y el coeficiente de variación de cada estimador, y compáralos. Realiza
-un análisis utilizando gráficos y las estadísticas pertinentes para
-determinar cuál de los estimadores es el más eficiente.</li>
+<li><p>Mediante una simulación computacional, calcula la varianza
+muestral y el coeficiente de variación de cada estimador, y
+compáralos.</p></li>
+<li><p>Realiza un análisis utilizando gráficos y las estadísticas
+pertinentes para determinar cuál de los estimadores es el más
+eficiente.</p></li>
 </ul></li>
 </ol>
+<hr />
 </br></br>
-<div id="condiciones-de-entrega-1"
-class="section level3 content-box-gray">
-<h3><span style="color:#686868"><strong>Condiciones de
-entrega</strong></span></h3>
-<ul>
-<li><p>Para generar muestras de la distribución Gamma en
-<strong>R</strong>:</p>
-<ul>
-<li><p>Parámetros de la distribución Gamma</p>
-<pre>
-alpha <- 3  # Forma
-beta <- 2   # Escala
-n <- 50     # Tamaño de muestra
-m <- 100    # Número de muestras
-</pre></li>
-<li><p>Generación de 100 muestras de tamaño n=50</p>
-<pre>
-set.seed(123)  # Para reproducibilidad
-muestras <- replicate(m, rgamma(n, shape = alpha, scale = beta))
-</pre></li>
-</ul></li>
-<li><p>La solución se debe presentar en un archivo HTML generado
-mediante RMarkdown (.Rmd).</p></li>
-<li><p>Responde a los ejercicios en orden (de la <strong>a</strong>
-hasta la <strong>d</strong>).</p></li>
-<li><p>Por cada ejercicio, incluye:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Código R:</strong> Con comentarios explicativos.</li>
-<li><strong>Gráficos y cálculos:</strong> Según lo solicitado.</li>
-<li><strong>Interpretación:</strong> Explicación clara de los resultados
-obtenidos.</li>
-</ol></li>
-<li><p>El archivo <code>.Rmd</code> y el HTML generado deben entregarse
-juntos.</p></li>
-<li><p>Establece la semilla con tu código de estudiante:
-<code>set.seed(codigo)</code>.</p></li>
-<li><p>Asegúrate de que todos los códigos compilen correctamente antes
-de la entrega.</p></li>
-</ul>
-</div>
-<p></br></br></br></p>
-</div>
-</div>
-<div id="problema-3" class="section level1">
-<h1><span style="color:#034a94"> <strong>Problema 3</strong></span></h1>
-<p><br/></p>
-<div id="teorema-del-límite-central" class="section level2">
-<h2><span style="color:#FF7F00"><strong>Teorema del Límite
-Central</strong></span></h2>
-<p></br></p>
+<h3>
+Problema 3: Teorema del límite central
+</h3>
 <p>En una planta de fabricación de componentes electrónicos, se modela
-el <strong>tiempo de funcionamiento continuo de una máquina antes de
-necesitar mantenimiento</strong> mediante una <strong>distribución
-Gamma</strong>. El análisis ha determinado que el tiempo hasta el primer
-mantenimiento sigue una <strong>distribución Gamma</strong> con
-parámetros <span class="math inline">\(\alpha = 5\)</span> (forma) y
-<span class="math inline">\(\beta = 400\)</span> (escala).</p>
+el tiempo (meses) de funcionamiento continuo de una máquina antes de
+necesitar mantenimiento mediante una distribución Exponencial. El
+análisis ha determinado que el tiempo hasta el primer mantenimiento
+sigue una distribución Exponencial con parámetro <span
+class="math inline">\(\lambda = 0.16\)</span>.</p>
 <p>A continuación, se presentan una serie de actividades para explorar
 esta distribución y su aplicación en el contexto del mantenimiento
 predictivo.</p>
 <ol style="list-style-type: lower-alpha">
-<li><p>Cálculo de la media y varianza de la población</p>
+<li><p>Cálculo de la media y varianza de la población:</p>
 <ul>
-<li>Determina la <strong>media</strong> y <strong>varianza</strong> de
-la población de los tiempos <span class="math inline">\(X\)</span> hasta
-que se requiere mantenimiento de las máquinas en este contexto.<br />
-</li>
-<li>Interpreta los resultados en relación con el <strong>tiempo esperado
-antes del mantenimiento</strong> y la <strong>variabilidad en los
-tiempos</strong>.</li>
+<li><p>Determina la media y varianza de la población de los tiempos
+<span class="math inline">\(X\)</span> hasta que se requiere
+mantenimiento de las máquinas en este contexto.</p></li>
+<li><p>Interpreta los resultados en relación con el tiempo esperado
+antes del mantenimiento y la variabilidad en los tiempos.</p></li>
 </ul></li>
-<li><p>Gráfico de la curva de densidad</p>
+<li><p>Gráfico de la curva de densidad:</p>
 <ul>
-<li>Grafica la <strong>función de densidad</strong> de la distribución
-Gamma que describe la población.<br />
-</li>
-<li>Explica cómo los parámetros <span
-class="math inline">\(\alpha\)</span> (forma) y <span
-class="math inline">\(\beta\)</span> (escala) <strong>afectan la forma
-de la curva</strong>.<br />
-</li>
-<li>Interpreta el modelo en relación con el <strong>mantenimiento
-predictivo</strong> y la <strong>probabilidad de fallos prematuros o
-tardíos</strong>.</li>
+<li><p>Grafica la función de densidad de la distribución Exponencial que
+describe la población.</p></li>
+<li><p>Explica cómo el parámetro <span
+class="math inline">\(\lambda\)</span> afectan la forma de la
+curva.</p></li>
+<li><p>Interpreta el modelo en relación con el mantenimiento predictivo
+y la probabilidad de fallos prematuros o tardíos.</p></li>
 </ul></li>
-<li><p>Comparación de parámetros, estimadores y estimaciones</p>
+<li><p>Comparación de parámetros, estimadores y estimaciones: Toma 10
+muestras aleatorias de tamaño <span class="math inline">\(n =
+200\)</span> de la población Exponencial de parámetro <span
+class="math inline">\(\lambda\)</span> usando la función
+<code>rexp(n, rate=lambda)</code> de <strong>R</strong> y establece una
+semilla como por ejemplo <code>set.seed(123)</code> para asegurar la
+reproducibilidad de los resultados. Para cada muestra:</p>
 <ul>
-<li>Toma <strong>10 muestras aleatorias</strong> de tamaño <span
-class="math inline">\(n = 200\)</span> de la población. Para cada
-muestra:
+<li><p>Elabora un histograma e interpreta la distribución de los
+datos.</p></li>
+<li><p>Calcula la media y varianza muestral y compara con los valores
+poblacionales.</p></li>
+<li><p>Analiza los siguientes conceptos:</p>
 <ul>
-<li><strong>Elabora un histograma</strong> e interpreta la distribución
-de los datos.</li>
-<li><strong>Calcula la media y varianza muestral</strong> y compara con
-los valores poblacionales.</li>
-<li>Analiza los siguientes conceptos:
-<ul>
-<li><strong>Parámetros</strong>: Identifica los <strong>valores
-poblacionales</strong> reales.</li>
-<li><strong>Estimadores</strong>: Define las <strong>fórmulas
-utilizadas</strong> para estimar los parámetros.</li>
-<li><strong>Estimaciones</strong>: Interpreta los <strong>valores
-obtenidos</strong> y su relación con las muestras.</li>
-</ul></li>
+<li><p>Parámetros: Identifica los valores poblacionales reales.</p></li>
+<li><p>Estimadores: Define las fórmulas utilizadas para estimar los
+parámetros.</p></li>
+<li><p>Estimaciones: Interpreta los valores obtenidos y su relación con
+las muestras.</p></li>
 </ul></li>
 </ul></li>
 <li><p>Aplicación del Teorema del Límite Central para <span
-class="math inline">\(n = 200\)</span></p>
+class="math inline">\(n = 200\)</span>:</p>
 <ul>
-<li>Genera <strong>100 muestras de tamaño <span class="math inline">\(n
-= 200\)</span></strong> de la población Gamma.<br />
-</li>
-<li><strong>Calcula la media muestral</strong> de cada muestra y elabora
-un <strong>histograma de las 100 medias muestrales</strong>.</li>
-<li>Obtén el <strong>promedio</strong> y la <strong>varianza</strong> de
-estas 100 medias muestrales.</li>
-<li><strong>Aplica un test de normalidad</strong> (<span
-class="math inline">\(\alpha = 0.05\)</span>) a las <strong>100 medias
-muestrales</strong> e interpreta los resultados.</li>
-<li>Explica cómo se <strong>evidencia el Teorema del Límite
-Central</strong> en el comportamiento de las medias muestrales,
-considerando:
+<li><p>Genera 100 muestras de tamaño <span class="math inline">\(n =
+200\)</span> de la población Exponencial.</p></li>
+<li><p>Calcula la media muestral de cada muestra y elabora un histograma
+de las 100 medias muestrales.</p></li>
+<li><p>Obtén el promedio y la varianza de estas 100 medias
+muestrales.</p></li>
+<li><p>Aplica un test de normalidad (<span class="math inline">\(\alpha
+= 0.05\)</span>) a las 100 medias muestrales e interpreta los
+resultados.</p></li>
+<li><p>Explica cómo se evidencia el Teorema del Límite Central en el
+comportamiento de las medias muestrales, considerando:</p>
 <ul>
-<li><strong>Distribución de las medias muestrales</strong>.</li>
-<li><strong>Comparación de la media y varianza muestral con las
-esperadas</strong>.</li>
+<li><p>Distribución de las medias muestrales.</p></li>
+<li><p>Comparación de la media y varianza muestral con las
+esperadas.</p></li>
 </ul></li>
 </ul></li>
 <li><p>Aplicación del Teorema del Límite Central variando <span
-class="math inline">\(n\)</span></p>
+class="math inline">\(n\)</span>:</p>
 <ul>
-<li>Repite el análisis anterior <strong>extrayendo 100 muestras</strong>
-de los siguientes tamaños:<br />
-<span class="math inline">\(n = 5, 10, 80, 200, 500,
-2000\)</span>.<br />
-</li>
-<li>Para cada tamaño de muestra <span class="math inline">\(n\)</span>:
+<li><p>Repite el análisis anterior extrayendo 100 muestras de cada uno
+de los siguientes tamaños: <span class="math inline">\(n =\)</span> 5,
+10, 80, 200, 500 y 2,000.</p></li>
+<li><p>Para cada tamaño de muestra <span
+class="math inline">\(n\)</span>:</p>
 <ul>
-<li><strong>Calcula el promedio y la varianza</strong> de las 100 medias
-muestrales.</li>
-<li><strong>Elabora un histograma</strong> de las 100 medias
-muestrales.</li>
-<li><strong>Aplica un test de normalidad</strong> (<span
-class="math inline">\(\alpha = 0.05\)</span>) y discute los
-resultados.</li>
+<li><p>Calcula el promedio y la varianza de las 100 medias
+muestrales.</p></li>
+<li><p>Elabora un histograma de las 100 medias muestrales.</p></li>
+<li><p>Aplica un test de normalidad (<span class="math inline">\(\alpha
+= 0.05\)</span>) y discute los resultados.</p></li>
 </ul></li>
-<li>Concluye sobre la relación entre el <strong>tamaño muestral</strong>
-y la <strong>validez del Teorema del Límite Central</strong>,
-analizando:
+<li><p>Concluye sobre la relación entre el tamaño muestral y la validez
+del Teorema del Límite Central, analizando:</p>
 <ul>
-<li><strong>Comportamiento de la distribución de las medias
-muestrales</strong>.</li>
-<li><strong>Convergencia de la media y varianza muestral hacia los
-valores teóricos</strong>.</li>
+<li><p>Comportamiento de la distribución de las medias
+muestrales.</p></li>
+<li><p>Convergencia de la media y varianza muestral hacia los valores
+teóricos.</p></li>
 </ul></li>
 </ul></li>
 </ol>
-<p></br></br></p>
-<div id="condiciones-de-entrega-2"
-class="section level3 content-box-gray">
-<h3><span style="color:#686868"><strong>Condiciones de
-entrega</strong></span></h3>
-<ul>
-<li><p>La solución se debe presentar en un archivo HTML generado
-mediante RMarkdown (.Rmd).</p></li>
-<li><p>Responde a los ejercicios en orden (de la <strong>a</strong>
-hasta la <strong>e</strong>).</p></li>
-<li><p>Por cada ejercicio, incluye:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Código R:</strong> Con comentarios explicativos.</li>
-<li><strong>Gráficos y cálculos:</strong> Según lo solicitado.</li>
-<li><strong>Interpretación:</strong> Explicación clara de los resultados
-obtenidos.</li>
-</ol></li>
-<li><p>El archivo <code>.Rmd</code> y el HTML generado deben entregarse
-juntos.</p></li>
-<li><p>Establece la semilla con tu código de estudiante:
-<code>set.seed(codigo)</code>.</p></li>
-<li><p>Asegúrate de que todos los códigos compilen correctamente antes
-de la entrega.</p></li>
-</ul>
-</div>
-<p></br></br></br></p>
-</div>
-</div>
-<div id="problema-4" class="section level1">
-<h1><span style="color:#034a94"><strong>Problema 4</strong></span></h1>
-<p><br/></p>
-<div id="estimación-de-intervalos-de-confianza-mediante-bootstrap"
-class="section level2">
-<h2><span style="color:#FF7F00"><strong>Estimación de Intervalos de
-Confianza mediante Bootstrap</strong></span></h2>
-<p></br> Una empresa dedicada a la generación de energía renovable desea
+<hr />
+</br></br>
+<h3>
+Problema 4: Estimación de intervalos de confianza
+</h3>
+<p>Una empresa dedicada a la generación de energía renovable desea
 evaluar el rendimiento de sus 20 generadores eléctricos portátiles,
 alimentados con biocombustible. Estos generadores se utilizan en
 proyectos remotos, donde la eficiencia energética es crucial para
 minimizar costos y reducir la huella ambiental. Para el estudio, se mide
 la eficiencia energética de cada generador, expresada en kilovatios-hora
 por litro de combustible (kWh/L). Los resultados son:</p>
-<pre class="r"><code># Muestra de eficiencia energética (kWh/L)
-muestra &lt;- c(6.12, 5.87, 5.45, 6.33, 5.71, 6.04, 5.92, 5.65, 6.18, 
-             5.78, 5.95, 6.21, 5.63, 5.79, 6.11, 5.88, 6.02, 5.76, 5.85, 6.10)</code></pre>
-<p>El objetivo es estimar un intervalo de confianza al 95% para la
+<pre>
+# Muestra de eficiencia energética (kWh/L)
+muestra <- c(6.12, 5.87, 5.45, 6.33, 5.71, 6.04, 5.92, 5.65, 6.18, 
+             5.78, 5.95, 6.21, 5.63, 5.79, 6.11, 5.88, 6.02, 5.76, 5.85, 6.10)
+</pre>
+<p>El objetivo es determinar intervalos de confianza al 95% para la
 eficiencia media.</p>
 <p>Realiza las siguientes actividades:</p>
 <ol style="list-style-type: lower-alpha">
 <li><p>Normalidad:</p>
 <ul>
-<li>Elabora un histograma y una curva de densidad de la muestra. ¿Podría
-considerarse normal la población de origen de la muestra?</li>
-<li>Aplica las pruebas Shapiro-Wilk y Kolmogorov-Smirnov para evaluar la
-normalidad. Expón claramente las hipótesis nula y alternativa. Determina
-el nivel de significancia adecuado. Argumenta el valor del nivel de
-significancia que uses.<br />
-</li>
-<li>Comenta si los resultados sugieren la viabilidad de usar métodos
-paramétricos para calcular intervalos de confianza.</li>
+<li><p>Elabora un histograma y una curva de densidad de la muestra.
+¿Podría considerarse normal la población de origen de la
+muestra?</p></li>
+<li><p>Aplica pruebas para evaluar la normalidad. Expón claramente las
+hipótesis nula y alternativa. Determina el nivel de significancia
+adecuado. Argumenta el valor del nivel de significancia que
+uses.</p></li>
+<li><p>Comenta si los resultados sugieren la viabilidad de usar métodos
+paramétricos para calcular intervalos de confianza.</p></li>
 </ul></li>
-<li><p>Procedimiento Bootstrap:</p>
+<li><p>Método paramétrico:</p>
 <ul>
-<li>Calcula la media de la muestra original (<span
-class="math inline">\(\bar{X}\)</span>).</li>
-<li>Genera 1000 muestras bootstrap de tamaño <span
-class="math inline">\(n = 20\)</span> mediante muestreo con
-reemplazo.</li>
-<li>Calcula la media muestral para cada muestra bootstrap.</li>
-<li>Obtén los percentiles 2.5 y 97.5 de las medias muestrales
-bootstrap.</li>
-<li>Calcula 2 tipos de intervalos de confianza para la media mediante
-Bootstrap.</li>
-<li>Compara ambos intervalos: ¿Son similares o presentan diferencias
-significativas?</li>
+<li><p>Si se cumplen las condiciones para su aplicación, calcula un
+intervalo de confianza paramétrico.</p></li>
+<li><p>Compara e interpreta este intervalo con los obtenidos mediante
+métodos no paramétricos.</p></li>
 </ul></li>
-<li><p>Método Paramétrico:</p>
+<li><p>Procedimiento bootstrap:</p>
 <ul>
-<li>Si se cumplen las condiciones para su aplicación, calcula un
-intervalo de confianza paramétrico.</li>
-<li>Compara este intervalo con los obtenidos mediante métodos no
-paramétricos.</li>
+<li><p>Calcula 2 tipos de intervalos de confianza para la media mediante
+Bootstrap.</p></li>
+<li><p>Compara ambos intervalos: ¿Son similares o presentan diferencias
+significativas?</p></li>
 </ul></li>
 </ol>
-<br/><br/>
-<div id="condiciones-de-entrega-3"
-class="section level3 content-box-gray">
-<h3><span style="color:#686868"><strong>Condiciones de
-entrega</strong></span></h3>
+<hr />
+</br></br>
+<h3>
+Problema 5: Análisis de potencia, tamaño del efecto y errores tipo I y
+II en una prueba de hipótesis
+</h3>
+<p><strong>Caso:</strong> Se asume que la presión arterial en la
+población general sigue una distribución normal con media 120 mmHg y
+desviación estándar 15 mmHg. Un laboratorio desea evaluar si la media de
+presión arterial en un grupo de pacientes con cierta enfermedad difiere
+significativamente de 120 mmHg, mediante una prueba t para una muestra,
+asumiendo varianza poblacional desconocida.</p>
+<p><strong>Objetivo del caso:</strong> Determinar de manera informada un
+tamaño de muestra y un nivel de significancia adecuados para realizar el
+estudio.</p>
+<p>Para lograr este objetivo, analiza la relación entre la potencia
+estadística, el tamaño del efecto y el tamaño muestral.</p>
 <ul>
-<li><p>La solución se debe presentar en un archivo HTML generado
-mediante RMarkdown (.Rmd).</p></li>
-<li><p>Responde a los ejercicios en orden (de la <strong>a</strong>
-hasta la <strong>c</strong>).</p></li>
-<li><p>Por cada ejercicio, incluye:</p>
+<li><p>Fija inicialmente el nivel de significancia en <span
+class="math inline">\(\alpha=0.1\)</span></p></li>
+<li><p>Evalúa la potencia estadística para diferentes tamaños muestrales
+<span class="math inline">\(n =\)</span> 10, 20, 30, 40, 50, 60, 70, 80,
+90, 100, 200, 300, 400, 500, 600, 700, 800, 900 y 1,000.</p></li>
+<li><p>Considera tres tamaños del efecto: <span class="math inline">\(d
+= 0.2\)</span> (pequeño), <span class="math inline">\(d = 0.5\)</span>
+(mediano), <span class="math inline">\(d = 0.8\)</span>
+(grande).</p></li>
+<li><p>Visualiza los resultados:</p>
+<ul>
+<li><p>Eje <span class="math inline">\(X\)</span>: tamaño
+muestral.</p></li>
+<li><p>Eje <span class="math inline">\(Y\)</span>: potencia
+estadística.</p></li>
+<li><p>Traza una curva para cada tamaño del efecto.</p></li>
+<li><p>Utiliza las funciones <code>power.t.test</code> y
+<code>ggplot2</code> en <strong>R</strong> para construir los
+gráficos.</p></li>
+<li><p>Posteriormente, repite el análisis para <span
+class="math inline">\(\alpha = 0.05\)</span> y <span
+class="math inline">\(\alpha = 0.01\)</span> y compara los tres
+gráficos.</p></li>
+</ul></li>
+</ul>
+<p>Preguntas orientadoras para el análisis:</p>
+<ul>
+<li><p>¿Qué tamaño de muestra se requiere para alcanzar una potencia del
+80% al detectar un efecto grande(<span
+class="math inline">\(d=0.8\)</span>)?</p></li>
+<li><p>¿Cuántas observaciones se necesitan para detectar un efecto
+mediano (<span class="math inline">\(d=0.5\)</span>) con una potencia
+adecuada?</p></li>
+<li><p>Para un efecto grande, ¿qué sucede al aumentar el tamaño de
+muestra más allá de 300 observaciones? ¿Es eficiente?</p></li>
+<li><p>Explica cómo influye el tamaño del efecto sobre la potencia
+estadística.</p></li>
+<li><p>¿Cómo afecta el tamaño muestral a la potencia
+estadística?</p></li>
+<li><p>¿En qué punto aumentar el tamaño muestral deja de proporcionar
+beneficios significativos en la potencia?</p></li>
+</ul>
+<p>Con base en los gráficos obtenidos y tu análisis, propón un tamaño de
+muestra y un nivel de significancia apropiados para diseñar el
+estudio.</p>
+<hr />
+</br></br>
+<h3>
+Problema 6: Prueba de hipótesis e intervalo de confianza
+</h3>
+<p>Teniendo en cuenta el contexto y los datos utilizados en el informe
+estadístico desarrollado en la Actividad 1, formule tres preguntas de
+investigación relevantes. Para cada pregunta, realice el análisis
+correspondiente utilizando pruebas de hipótesis e intervalos de
+confianza. Además, verifique el cumplimiento de los supuestos necesarios
+para garantizar la validez de los procedimientos estadísticos
+aplicados.</p>
+<hr />
+</br></br>
+<h2>
+Condiciones de entrega
+</h2>
 <ol style="list-style-type: decimal">
-<li><strong>Código R:</strong> Con comentarios explicativos.</li>
-<li><strong>Gráficos y cálculos:</strong> Según lo solicitado.</li>
-<li><strong>Interpretación:</strong> Explicación clara de los resultados
-obtenidos.</li>
-</ol></li>
-<li><p>El archivo <code>.Rmd</code> y el HTML generado deben entregarse
-juntos.</p></li>
-<li><p>Establece la semilla con tu código de estudiante:
+<li><p>Número de integrantes</p>
+<ul>
+<li>La actividad debe resolverse en grupos de dos (2) personas.</li>
+</ul></li>
+<li><p>Entrega en plataforma</p>
+<ul>
+<li>La actividad debe ser entregada a través de la plataforma Bspace
+antes de la fecha límite establecida.</li>
+</ul></li>
+<li><p>Formato de entrega</p>
+<ul>
+<li>El proyecto desarrollado en <strong>R</strong> debe ser cargado en
+la plataforma en un archivo comprimido (.zip).</li>
+</ul></li>
+<li><p>Contenido obligatorio del archivo .zip</p>
+<ul>
+<li><p>Si usa archivo de datos, el archivo que contiene los datos
+utilizados debe estar incluido y en formato Excel .</p></li>
+<li><p>La carpeta del proyecto en <strong>R</strong>, que debe incluir
+el archivo .Rproj generado al crear el proyecto.</p></li>
+<li><p>El archivo .Rmd que documenta detalladamente cada uno de los
+pasos solicitados para cada problema.</p></li>
+<li><p>El archivo .HTML generado al renderizar el archivo .Rmd.</p></li>
+<li><p>Importante:</p>
+<ul>
+<li><p>El archivo .Rmd debe renderizar correctamente antes de la
+entrega.</p></li>
+<li><p>Asegúrese de trabajar en el directorio raíz del proyecto
+utilizando la función <code>dir()</code>.</p></li>
+<li><p>Al renderizar, deben encontrarse disponibles todos los archivos y
+carpetas utilizados en el análisis.</p></li>
+<li><p>Los ejercicios deben resolverse y documentarse en el orden
+establecido en el enunciado.</p></li>
+</ul></li>
+</ul></li>
+<li><p>Presentación de gráficos y tablas</p>
+<ul>
+<li><p>Enumeración: Todos los gráficos y tablas deben estar debidamente
+numerados (por ejemplo, “Figura 1”, “Tabla 1”, etc.).</p></li>
+<li><p>Interpretación: Cada gráfico y cada tabla deben ser interpretados
+de manera clara y precisa en el texto del informe.</p></li>
+</ul></li>
+<li><p>Legibilidad de gráficos</p>
+<ul>
+<li><p>Cada gráfico debe incluir títulos claros en los ejes <span
+class="math inline">\(X\)</span> y <span
+class="math inline">\(Y\)</span>.</p></li>
+<li><p>Las leyendas, si se incluyen, deben ser legibles y
+comprensibles.</p></li>
+</ul></li>
+<li><p>Referencias en el texto</p>
+<ul>
+<li>Las tablas y gráficos deben ser citados explícitamente dentro del
+texto utilizando su numeración correspondiente.</li>
+</ul></li>
+<li><p>Estructura esperada por cada ejercicio</p>
+<ul>
+<li><p>Código en RMarkdown (.Rmd): Debe incluir comentarios explicativos
+que faciliten la comprensión del código.</p></li>
+<li><p>Resultados gráficos y cálculos: Según lo solicitado en el
+enunciado de la actividad.</p></li>
+<li><p>Interpretación: Explicación clara de los resultados
+obtenidos.</p></li>
+<li><p>Reproducibilidad:</p>
+<ul>
+<li><p>Para actividades que involucren generación aleatoria de datos o
+uso de métodos bootstrap, se debe establecer una semilla con el código
+de estudiante de alguno de los integrantes del grupo, mediante
 <code>set.seed(codigo)</code>.</p></li>
-<li><p>Asegúrate de que todos los códigos compilen correctamente antes
-de la entrega.</p></li>
+<li><p>Ejemplo para generar 100 muestras de tamaño 50 de la distribución
+Gamma en <strong>R</strong> usando semilla:</p></li>
+</ul></li>
 </ul>
-</div>
-<p></br></br></br></p>
-</div>
-</div>
-<div id="problema-5" class="section level1">
-<h1><span style="color:#034a94"><strong>Problema 5</strong></span></h1>
-<p><br/></p>
-<div
-id="análisis-de-potencia-tamaño-del-efecto-y-errores-tipo-i-y-ii-en-una-prueba-de-hipótesis-para-una-sola-población"
-class="section level2">
-<h2><span style="color:#FF7F00"><strong>Análisis de Potencia, Tamaño del
-Efecto y Errores Tipo I y II en una Prueba de Hipótesis para una Sola
-Población</strong></span></h2>
-<p>Esta actividad propone explorar la relación entre el tamaño muestral,
-el tamaño del efecto y la potencia estadística mediante simulaciones. Se
-analizarán diferentes escenarios usando pruebas t para una muestra y se
-interpretarán los resultados obtenidos.</p>
-<p></br> Se parte de una simulación de la presión arterial de 500
-individuos, generada con una distribución normal de media 120 mmHg y
-desviación estándar de 15 mmHg. El laboratorio busca determinar si la
-presión arterial media poblacional difiere significativamente de 120
-mmHg mediante una <strong>prueba t para una muestra</strong>.</p>
-<p>Información para realizar la simulación:</p>
-<ul>
-<li>Distribución de los datos simulados: <span class="math inline">\(X
-\sim N(120, 15)\)</span></li>
-<li>Tamaño muestral: Variable según el caso.</li>
-<li>Semilla: <code>set.seed(123)</code>.</li>
-</ul>
-<p><strong>Caso 1: Variación del Tamaño del Efecto</strong></p>
-<p>Analiza la potencia manteniendo <span class="math inline">\(\alpha =
-0.001\)</span> y variando el tamaño muestral y el tamaño del efecto:</p>
-<ul>
-<li>Tamaños muestrales: <span class="math inline">\(n = 20, 30, 40, 50,
-60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800\)</span>.</li>
-<li>Tamaños del efecto: <span class="math inline">\(d = 0.2\)</span>
-(pequeño), <span class="math inline">\(d = 0.5\)</span> (mediano), <span
-class="math inline">\(d = 0.8\)</span> (grande).</li>
-<li>Simulaciones: 1000 repeticiones.</li>
-</ul>
-<p>Construye un gráfico:</p>
-<ul>
-<li>Eje X: Tamaño muestral.</li>
-<li>Eje Y: Potencia.</li>
-<li>Curvas: Una para cada tamaño del efecto.</li>
-<li>Visualización: Usa <code>power.t.test</code> y
-<code>ggplot2</code>.</li>
-</ul>
-<p>Responde:</p>
-<ol style="list-style-type: lower-alpha">
-<li>¿Con qué tamaño muestral se alcanza el 80 % de potencia para un
-efecto grande (<span class="math inline">\(d=0.8\)</span>)?</li>
-<li>¿Cuántas observaciones se necesitan para detectar un efecto mediano
-(<span class="math inline">\(d=0.5\)</span>) con una potencia
-adecuada?</li>
-<li>¿Qué ocurre si se incrementa el tamaño muestral más allá de 300
-observaciones para un efecto grande? ¿Es útil?</li>
-<li>Interpreta el efecto del tamaño en la potencia para cada tamaño del
-efecto.</li>
+<pre>
+ alpha <- 3  # Forma
+ sigma <- 2   # Escala
+ n <- 50     # Tamaño de muestra
+ m <- 100    # Número de muestras
+
+ set.seed(123)  # Para reproducibilidad
+ muestras <- replicate(m, rgamma(n, shape = alpha, scale = sigma))
+ </pre></li>
 </ol>
-<p><strong>Caso 2: Variación del Tamaño de Muestra</strong></p>
-<p>Analiza la potencia manteniendo <span class="math inline">\(\alpha =
-0.05\)</span> y variando el tamaño muestral y el tamaño del efecto:</p>
-<ul>
-<li>Tamaños muestrales: <span class="math inline">\(n = 20, 30, 40, 50,
-60, 70, 80, 90, 100, 200, 300, 400, 500, 600, 700, 800\)</span>.</li>
-<li>Tamaños del efecto: <span class="math inline">\(d = 0.2\)</span>
-(pequeño), <span class="math inline">\(d = 0.5\)</span> (mediano), <span
-class="math inline">\(d = 0.8\)</span> (grande).</li>
-<li>Simulaciones: 1000 repeticiones.</li>
-</ul>
-<p>Construye gráficos:</p>
-<ul>
-<li>Eje X: Tamaño del efecto.</li>
-<li>Eje Y: Potencia.</li>
-<li>Curvas: Una para cada tamaño de muestra.</li>
-<li>Visualización: Usa <code>power.t.test</code> y
-<code>ggplot2</code>.</li>
-</ul>
-<p>Responde:</p>
-<ol start="5" style="list-style-type: lower-alpha">
-<li>¿Cómo afecta el tamaño del efecto a la potencia estadística?</li>
-<li>¿Cómo influye el tamaño muestral en la potencia estadística?</li>
-<li>¿En qué punto aumentar el tamaño muestral deja de proporcionar
-beneficios significativos en la potencia?</li>
-<li>Repite el análisis para <span class="math inline">\(\alpha =
-0.01\)</span> y <span class="math inline">\(\alpha = 0.10\)</span> y
-compara los tres resultados. ¿Cuál sería más adecuado en un contexto
-médico y por qué?</li>
-</ol>
-<p></br></br></br></p>
-<div id="condiciones-de-entrega-4"
-class="section level3 content-box-gray">
-<h3><span style="color:#686868"><strong>Condiciones de
-entrega</strong></span></h3>
-<ul>
-<li><p>La solución se debe presentar en un archivo HTML generado
-mediante RMarkdown (.Rmd).</p></li>
-<li><p>Responde a los ejercicios en orden (de la <strong>a</strong>
-hasta la <strong>h</strong>).</p></li>
-<li><p>Por cada ejercicio, incluye:</p>
-<ol style="list-style-type: decimal">
-<li><strong>Código R:</strong> Con comentarios explicativos.</li>
-<li><strong>Gráficos y cálculos:</strong> Según lo solicitado.</li>
-<li><strong>Interpretación:</strong> Explicación clara de los resultados
-obtenidos.</li>
-</ol></li>
-<li><p>El archivo <code>.Rmd</code> y el HTML generado deben entregarse
-juntos.</p></li>
-<li><p>Establece la semilla con tu código de estudiante:
-<code>set.seed(codigo)</code>.</p></li>
-<li><p>Asegúrate de que todos los códigos compilen correctamente antes
-de la entrega.</p></li>
-</ul>
-</div>
-<!-- #### <span style="color:#696969">**Código caso1.R**</span> -->
-<!-- ```{r, eval=FALSE} -->
-<!-- #Gráfica 1 -->
-<!-- #Se necesita el paquete pwr  -->
-<!-- if(!require(pwr)){install.packages("pwr");library("pwr")} -->
-<!-- # t-TEST -->
-<!-- # Se aplicará power.t.test del paquete stats (ya en R). Calcula la potencia de la prueba t de una o dos muestras, o determina los parámetros para obtener un valor particular de la potencia. -->
-<!-- d<-seq(.1,2,by=.1) # 20 tamaños de los efectos -->
-<!-- n<-1:150 # Tamaños muestrales -->
-<!-- t.test.power.effect <-as.data.frame(do.call("cbind",lapply(1:length(d),function(i) -->
-<!-- { -->
-<!--   sapply(1:length(n),function(j) -->
-<!--   { -->
-<!--     power.t.test(n=n[j],d=d[i],sig.level=0.05,power=NULL,type= "two.sample")$power -->
-<!--   }) -->
-<!-- }))) -->
-<!-- # Si algunas potencias no se pueden calcular, se ajustan a cero: -->
-<!-- t.test.power.effect[is.na(t.test.power.effect)] <- 0  -->
-<!-- colnames(t.test.power.effect)<-paste (d,"effect size") -->
-<!-- #Graficando los resultados -->
-<!-- prueba <-t.test.power.effect #data frame de 150 X 20 (para graficar) -->
-<!-- cuts_num<-c(2,5,8) # cortes -->
-<!-- #Cortes basados en: Cohen, J. (1988). Statistical Power Analysis for the Behavioral Sciences (2nd ed.). Hillsdale, NJ: Lawrence Erlbaum Associates, Publishers. -->
-<!-- cuts_cat<-c("pequeño","medio","grande")  -->
-<!-- columnas <- 1:ncol(prueba) #Lista de los valores 1:20 -->
-<!-- color_linea<-rainbow(length(columnas), alpha=.5) # Lista de 20 colores -->
-<!-- grosor_linea=3 # Grosor de la línea -->
-<!-- #Para el tipo de línea: (“blank”, “solid”, “dashed”, “dotted”, “dotdash”, “longdash”, “twodash”) ó  (0, 1, 2, 3, 4, 5, 6).  -->
-<!-- #Note que lty = “solid” is idéntica a lty=1. -->
-<!-- tipo_linea <- rep(1,length(color_linea))        #Repetir length(color)=20 veces el 1 -->
-<!-- tipo_linea[cuts_num]<-c(2:(length(cuts_num)+1)) #Asignar 2, 3, 4 en las posiciones 2, 5, 8 de tipo_linea -->
-<!-- #Resaltar posiciones importantes -->
-<!-- cuts_num<-c(2,5,8) # Cortes -->
-<!-- #Cortes basados en: Cohen, J. (1988). Statistical Power Analysis for the Behavioral Sciences (2nd ed.). Hillsdale, NJ: Lawrence Erlbaum Associates, Publishers. -->
-<!-- cuts_cat<-c("pequeño","medio","grande")  -->
-<!-- color_linea[cuts_num]<-c("black") -->
-<!-- efecto <- d # Listado de los 20 valores de 20 -->
-<!-- efecto[cuts_num] <- cuts_cat  #Reemplazar en "efecto" las posiciones cuts_num (2, 5, 8) por las categorías de cuts_cat -->
-<!-- par(fig=c(0,.8,0,1),new=TRUE) -->
-<!-- #Gráfica -->
-<!-- plot(1, type="n", #no produce puntos ni líneas -->
-<!--      frame.plot=FALSE,  -->
-<!--      xlab="Tamaño muestral", ylab="Potencia",  -->
-<!--      xlim=c(1,150),  ylim=c(0,1),  -->
-<!--      main="t-Test", axes = FALSE) -->
-<!-- #Editando los ejes, grid, etc. -->
-<!-- abline(v=seq(0,150,by=10), col = "lightgray", lty = "dotted") # Grid vertical -->
-<!-- abline(h=seq(0,1,by=.05), col = "lightgray", lty = "dotted")  # Grid horizontal -->
-<!-- axis(1,seq(0,150,by=10)) # Números en eje X -->
-<!-- axis(2,seq(0,1,by=.05))  # Números en eje Y -->
-<!-- #Plot de las lineas  -->
-<!-- #columnas <- 1:ncol(prueba) # lista de los valores 1:20 -->
-<!-- for(i in 1:length(columnas)) #length(columnas)=20 -->
-<!-- { -->
-<!--   lines(1:150, -->
-<!--         #prueba (data frame de 150 X 20, para graficar) -->
-<!--         #columna <- 1:ncol(prueba) listado de valores 1:20  -->
-<!--         prueba[,columnas[i]], #filtrar "prueba" para valor de columna -->
-<!--         col=color_linea[i],   #color_linea[cuts_num]<-c("black") -->
-<!--         lwd=grosor_linea,     #grosor de cada linea -->
-<!--         lty=tipo_linea[i]     #tipo_linea[cuts_num]<-c(2:(length(cuts_num)+1)) -->
-<!--   ) -->
-<!-- } -->
-<!-- #Leyendas -->
-<!-- par(fig=c(.65,1,0,1),new=TRUE) -->
-<!-- plot.new() -->
-<!-- legend("top",legend=efecto, col=color_linea, lwd=3, lty=tipo_linea, title="Tamaño efecto",  -->
-<!--        bty="n" #Opciones: o (complete box), n (no box), 7, L, C, U -->
-<!-- ) -->
-<!-- #Gráfica 2 -->
-<!-- #plot using ggplot2 -->
-<!-- #library(ggplot2) -->
-<!-- #library(reshape) -->
-<!-- #library(plotly) -->
-<!-- obj <- cbind(size=1:150, prueba) #Agregando el tamaño al data frame "prueba"  -->
-<!-- # Usar melt y unir con "effect" para el mapeo -->
-<!-- #El data frame "obj" se reconstruye con respecto al parámetro id="size".  -->
-<!-- melted <- cbind(reshape::melt(obj, id="size"), effect=rep(d,each=150))  -->
-<!-- p<- ggplot(data=melted, aes(x=size, y=value, color=as.factor(effect))) +  -->
-<!--   geom_line(size=0.7,alpha=.5) + -->
-<!--   ylab("Potencia") +  -->
-<!--   xlab("Tamaño muestral") +  -->
-<!--   ggtitle("t-Test")+ -->
-<!--   theme_bw() + -->
-<!--   #guides(fill=guide_legend(title="Efecto")) -->
-<!--   #scale_fill_discrete(name = "Efecto") -->
-<!--   #labs(fill='Efecto')  -->
-<!--   #scale_fill_manual("Efecto"#,values=c("orange","red") -->
-<!--   scale_color_discrete(name = "Tamaño del efecto")     -->
-<!-- # Interactive plot -->
-<!-- plotly::ggplotly(p) -->
-<!-- ``` -->
-<!-- </br></br> -->
-<!-- #### <span style="color:#696969">**Código caso2.R**</span> -->
-<!-- ```{r, eval=FALSE} -->
-<!-- #library(dplyr)     -->
-<!-- #library(tidyr)    #Para manipulación de datos: separate, gather, spread -->
-<!-- #library(ggplot2)   -->
-<!-- #library(plotly)   #Para curvas de potencias interactivas -->
-<!-- #library(pwr)      #Para cálculo de las potencias -->
-<!-- #Generar cálculos de las potencias con la funcion pwr.t2n.test. -->
-<!-- #Es un t-test para 2 muestras con tamaños diferentes  -->
-<!-- #Aquí: d es el tamaño del efecto, Power= potencia de la prueba= 1-beta):  -->
-<!-- #pwr.t2n.test(n1 = NULL, n2= NULL, d = NULL, sig.level = 0.05, power = NULL,  alternative = c("two.sided",  "less","greater")) -->
-<!-- ptab <- cbind(NULL, NULL)        -->
-<!-- for (i in seq(0,1, length.out = 200)){ -->
-<!--   pwrt1 <- pwr.t2n.test(n1 = 28, n2 = 1406,  -->
-<!--                         sig.level = 0.05, power = NULL,  -->
-<!--                         d = i, alternative="two.sided") -->
-<!--   pwrt2 <- pwr.t2n.test(n1 = 144, n2 = 1290,  -->
-<!--                         sig.level = 0.05, power = NULL,  -->
-<!--                         d = i, alternative="two.sided") -->
-<!--   pwrt3 <- pwr.t2n.test(n1 = 287, n2 = 1147,  -->
-<!--                         sig.level = 0.05, power = NULL,  -->
-<!--                         d = i, alternative="two.sided") -->
-<!--   pwrt4 <- pwr.t2n.test(n1 = 430, n2 = 1004,  -->
-<!--                         sig.level = 0.05, power = NULL,  -->
-<!--                         d = i, alternative="two.sided") -->
-<!--   pwrt5 <- pwr.t2n.test(n1 = 574, n2 = 860,  -->
-<!--                         sig.level = 0.05, power = NULL,  -->
-<!--                         d = i, alternative="two.sided") -->
-<!--   pwrt6 <- pwr.t2n.test(n1 = 717, n2 = 717,  -->
-<!--                         sig.level = 0.05, power = NULL,  -->
-<!--                         d = i, alternative="two.sided") -->
-<!--   #Es un data frame de tamaño 200 por 12:  -->
-<!--   ptab <- rbind(ptab, cbind(pwrt1$d, pwrt1$power, -->
-<!--                             pwrt2$d, pwrt2$power, -->
-<!--                             pwrt3$d, pwrt3$power, -->
-<!--                             pwrt4$d, pwrt4$power, -->
-<!--                             pwrt5$d, pwrt5$power, -->
-<!--                             pwrt6$d, pwrt6$power)) -->
-<!-- } -->
-<!-- #Es un data frame de tamaño 200 por 13 (la 1ra columna es ID) -->
-<!-- ptab <- cbind(seq_len(nrow(ptab)), ptab) -->
-<!-- colnames(ptab) <- c("id","n1=28, n2=1406;effect size","n1=28, n2=1406;power", -->
-<!--                     "n1=144, n2=1290;effect size","n1=144, n2=1290;power", -->
-<!--                     "n1=287, n2=1147;effect size","n1=287, n2=1147;power", -->
-<!--                     "n1=430, n2=1004;effect size","n1=430, n2=1004;power", -->
-<!--                     "n1=574, n2=860;effect size","n1=574, n2=860;power", -->
-<!--                     "n1=717, n2=717;effect size","n1=717, n2=717;power") -->
-<!-- #gather se usa  para "reunir" un par key-value. En este caso, en 3 columnas: ID, variables y respuestas numericas -->
-<!-- temp1 <- ptab %>% as.data.frame() %>%   gather(key = name, value = val, 2:13) -->
-<!-- #Separar celdas en columnas, de acuerdo a una condición (sep=). En este caso, se separó "name" en dos columnas: samples y pruebas  -->
-<!-- temp2 <- temp1 %>%   separate(col = name, into = c("samples", "pruebas"), sep = ";") -->
-<!-- #La función spread hace lo opuesto a gather. Son funciones complementarias.  -->
-<!-- #Es decir, si al resultado de aplicar la función spread le aplicamos la función gather llegamos al dataset original. -->
-<!-- temp3 <- temp2 %>%   spread(key = pruebas, value = val) -->
-<!-- #Convertir la variable "samples" a factor. -->
-<!-- temp3$samples <- factor(temp3$samples,  -->
-<!--                         levels = c("n1=28, n2=1406", "n1=144, n2=1290",  -->
-<!--                                    "n1=287, n2=1147", "n1=430, n2=1004", -->
-<!--                                    "n1=574, n2=860", "n1=717, n2=717") -->
-<!-- ) -->
-<!-- #Gráfica -->
-<!-- p<- ggplot(temp3, aes(x = `effect size`, y = power, color = samples)) + -->
-<!--   geom_line(size=1) +  -->
-<!--   theme_bw() +  -->
-<!--   theme(axis.text=element_text(size=10),  -->
-<!--         axis.title=element_text(size=10),  -->
-<!--         legend.text=element_text(size=10)) + -->
-<!--   geom_vline(xintercept = .54, linetype = 2) + -->
-<!--   geom_hline(yintercept = 0.80, linetype = 2)+ -->
-<!--   labs(x="Effect size", y="Power") + -->
-<!--   scale_color_discrete(name = "Sampling size")  -->
-<!-- # so simple to make interactive plots -->
-<!-- plotly::ggplotly(p) -->
-<!-- ``` -->
-</div>
-</div>
+<hr />
+</br></br>
+<h2>
+Rúbrica de evaluación
+</h2>
+<table>
+<colgroup>
+<col width="11%" />
+<col width="19%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="19%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><strong>Problema</strong></th>
+<th align="left"><strong>Muy Alto (30 pts)</strong></th>
+<th align="left"><strong>Alto (25 pts)</strong></th>
+<th align="left"><strong>Medio (20 pts)</strong></th>
+<th align="left"><strong>Bajo (15 pts)</strong></th>
+<th align="left"><strong>Muy Bajo (10 pts)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>P1</strong></td>
+<td align="left">Cálculos teóricos completos y correctos, código
+completo y correcto, gráficos completos y correctos, comparaciones entre
+lo teórico y experimental completas y correctas, explicación e
+interpretación completas y correctas.</td>
+<td align="left">Cálculos teóricos y código mayormente correctos,
+gráficos adecuados, comparaciones adecuadas entre lo teórico y
+experimental, explicaciones e interpretaciones en su mayoría
+correctas.</td>
+<td align="left">Cálculos teóricos, código o gráficos con errores
+parciales; comparaciones e interpretaciones incompletas o poco
+claras.</td>
+<td align="left">Cálculos teóricos o código con varios errores, gráficos
+incompletos o incorrectos, comparaciones y explicaciones
+deficientes.</td>
+<td align="left">Cálculos teóricos, código y gráficos incorrectos o
+incompletos; comparaciones e interpretaciones ausentes o
+inadecuadas.</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>P2</strong></td>
+<td align="left">Comparación completa y correcta entre la teoría y la
+simulación, con análisis detallado y justificación clara.
+Interpretaciones correctas.</td>
+<td align="left">Comparación adecuada entre la teoría y la simulación,
+con análisis aceptable y justificación razonable. Interpretaciones en su
+mayoría correctas.</td>
+<td align="left">Comparación parcial o incompleta; análisis superficial
+o justificación débil. Algunas interpretaciones incorrectas o poco
+claras.</td>
+<td align="left">Comparación deficiente o análisis incompleto,
+justificación confusa o inadecuada. Interpretaciones con errores
+significativos.</td>
+<td align="left">No se realiza comparación adecuada entre teoría y
+simulación; análisis, justificación e interpretaciones incorrectas o
+ausentes.</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>P3</strong></td>
+<td align="left">Comparación completa y correcta entre la teoría y la
+simulación, con análisis detallado y justificación clara.
+Interpretaciones correctas.</td>
+<td align="left">Comparación adecuada entre la teoría y la simulación,
+con análisis aceptable y justificación razonable. Interpretaciones en su
+mayoría correctas.</td>
+<td align="left">Comparación parcial o incompleta; análisis superficial
+o justificación débil. Algunas interpretaciones incorrectas o poco
+claras.</td>
+<td align="left">Comparación deficiente o análisis incompleto,
+justificación confusa o inadecuada. Interpretaciones con errores
+significativos.</td>
+<td align="left">No se realiza comparación adecuada entre teoría y
+simulación; análisis, justificación e interpretaciones incorrectas o
+ausentes.</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>P4</strong></td>
+<td align="left">Cálculos correctos con justificación completa, gráficos
+claros y análisis detallado de la interpretación.</td>
+<td align="left">Cálculos mayormente correctos, justificación adecuada y
+gráficos en su mayoría claros, con análisis aceptable.</td>
+<td align="left">Cálculos con errores parciales, justificación
+incompleta y gráficos poco claros; análisis superficial.</td>
+<td align="left">Cálculos con errores importantes, justificación débil o
+ausente, gráficos poco legibles o incorrectos; análisis deficiente.</td>
+<td align="left">Cálculos incorrectos, sin justificación adecuada,
+gráficos ausentes o incorrectos, y sin análisis relevante.</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>P5</strong></td>
+<td align="left">Análisis completo y correcto considerando distintos
+niveles de significancia, tamaños muestrales y tamaños de efecto,
+gráficos claros que muestran el impacto en la potencia, y análisis
+detallado de los resultados. Además, propone justificadamente el tamaño
+de muestra y nivel de significancia para realizar un test t de media de
+una población.</td>
+<td align="left">Análisis mayormente correcto considerando los
+diferentes factores; gráficos adecuados y propuesta razonable de tamaño
+muestral y nivel de significancia.</td>
+<td align="left">Análisis incompleto o con errores parciales; gráficos
+poco claros o incompletos; propuesta de tamaño muestral o nivel de
+significancia con justificación débil.</td>
+<td align="left">Análisis superficial o con errores importantes;
+gráficos deficientes; propuesta poco fundamentada o inadecuada.</td>
+<td align="left">Análisis incorrecto o incompleto; gráficos ausentes o
+incorrectos; no se realiza propuesta fundamentada de tamaño muestral o
+nivel de significancia.</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>P6</strong></td>
+<td align="left">Planteamiento claro y relevante de tres preguntas de
+investigación. Se formulan correctamente las hipótesis nula y
+alternativa para cada caso. Se aplican pruebas de hipótesis e intervalos
+de confianza adecuados, con interpretación correcta mediante valor-p e
+intervalo. Se justifica adecuadamente el nivel de significancia y se
+verifica el cumplimiento de los supuestos.</td>
+<td align="left">Se plantean preguntas pertinentes con formulación
+adecuada de hipótesis. El análisis estadístico es correcto en su mayoría
+y se justifica el nivel de significancia. La interpretación es clara,
+aunque con detalles menores por mejorar.</td>
+<td align="left">Las preguntas están formuladas con claridad parcial;
+algunas hipótesis o pruebas están incompletas o poco justificadas. El
+cumplimiento de supuestos no se revisa de forma detallada.</td>
+<td align="left">Planteamiento de preguntas o hipótesis inadecuado o
+incompleto. Análisis parcial, con errores en la interpretación o sin
+justificación del nivel de significancia. Supuestos no verificados.</td>
+<td align="left">Las preguntas no son relevantes o están mal formuladas.
+Las pruebas no se aplican o se interpretan incorrectamente. No se
+formulan hipótesis ni se justifica el nivel de significancia.</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Cumplimiento de formato, entrega y
+requerimientos de los problemas</strong></td>
+<td align="left">Cumple completamente con los requerimientos de entrega:
+tablas, gráficos, formato, codificación y tiempos de entrega.</td>
+<td align="left">Cumple la mayoría de los requerimientos, con pequeños
+errores de formato o entrega.</td>
+<td align="left">Cumple parcialmente los requerimientos; presenta varios
+errores de formato, tablas o entrega de archivos.</td>
+<td align="left">Cumple de forma deficiente con los requerimientos;
+múltiples errores de formato, gráficos o entrega.</td>
+<td align="left">No cumple con los requerimientos de formato, gráficos,
+codificación o entrega.</td>
+</tr>
+</tbody>
+</table>
 
 
 
