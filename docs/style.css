@@ -1,90 +1,170 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo Completo de Cajas</title>
+    <style>
+        :root {
+            --fondo-principal: #f5f5f5; /* Fondo claro general */
+            --texto-principal: #2c2c2c; /* Texto oscuro */
+            --color-actividad: #028A9E; /* Azul medio para actividades */
+            --color-reto: #034A94;     /* Azul oscuro para retos */
+            --color-nota: #0EB0C6;     /* Azul claro para notas */
+            --color-ejemplo: #FF7F00;  /* Fondo naranja claro para ejemplos */
+            --color-referencia: #E8F4FA; /* Fondo azul claro para referencias */
+            --borde-actividad: #FF5733; /* Naranja fuerte para bordes de actividad */
+            --borde-reto: #8E44AD;     /* Púrpura oscuro para bordes de reto */
+            --borde-nota: #0A91A8;     /* Azul específico para notas */
+            --borde-ejemplo: #E3C34A;  /* Naranja para ejemplos */
+            --borde-referencia: #6CB4CC; /* Azul claro para referencias */
+            --texto-cajas: #ffffff; /* Blanco para texto en las cajas */
+        }
 
+        body {
+            font-family: 'Barlow SemiCondensed', sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--texto-principal);
+            background-color: var(--fondo-principal);
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+            text-align: justify;
+        }
 
+        h1, h2, h3 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
 
-.section.sidebar { 
-  top: 61px;
-  border-bottom: 10px solid #063971;
-  border-left: 10px solid gray;
-  background-color: gray;
-}
+        h1 {
+            color: #034A94; /* Azul oscuro */
+            font-size: 2.5em;
+        }
 
-.navbar {
-background-color: #ffffff;
-border-color:#ffffff;
-}
+        h2 {
+            color: #028A9E; /* Azul medio */
+            font-size: 2em;
+        }
 
-.sidebar{ 
-  background-color: #8acfe6;
-}
+        /* === Estilo de Actividad === */
+        .caja-actividad {
+            background-color: var(--color-actividad);
+            color: var(--texto-cajas); /* Texto blanco */
+            border: 5px solid var(--borde-actividad); /* Naranja fuerte */
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-body {
-    font-family: 'Barlow SemiCondensed', sans-serif;
-    font-size: 19px;
-}
+        .caja-actividad h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
 
-/* Content Boxes
------------------------------------------------------------- */
- 
-.content-box-blue,
-.content-box-gray,
-.content-box-green,
-.content-box-purple,
-.content-box-red,
-.content-box-yellow {
-    margin: 0 0 25px;
-    overflow: hidden;
-    padding: 20px;
-}
- 
-.content-box-blue {
-    background-color: #d8ecf7;
-    border: 1px solid #afcde3;
-}
- 
-.content-box-gray {
-    background-color: #e2e2e2;
-    border: 1px solid #bdbdbd;
-}
- 
-.content-box-green {
-    background-color: #d9edc2;
-    border: 1px solid #b2ce96;
-}
- 
-.content-box-purple {
-    background-color: #e2e2f9;
-    border: 1px solid #bebde9;
-}
- 
-.content-box-red {
-    background-color: #f9dbdb;
-    border: 1px solid #e9b3b3;
-}
- 
-.content-box-yellow {
-    background-color: #fef5c4;
-    border: 1px solid #fadf98;
-    margin: 1;
-}
+        /* === Estilo de Reto === */
+        .caja-reto {
+            background-color: var(--color-reto);
+            color: var(--texto-cajas); /* Texto blanco */
+            border: 5px solid var(--borde-reto); /* Púrpura oscuro */
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-.my-pre{
-  line-height:1.2em;
-  background:linear-gradient(180deg,#ccc 0,#ccc 1.2em,#eee 0);
-  background-size:2.4em 2.4em;
-  background-origin:content-box;
-  
-  /* some extra styles*/
-  padding:0 20px;
-  text-align:justify;
-  font-family:calibri,arial,sans-serif;
-}
+        .caja-reto h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
 
-@import url("estilos_contenidos_servidor.css")
+        /* === Estilo de Nota === */
+        .caja-nota {
+            background-color: var(--color-nota);
+            color: var(--texto-cajas); /* Texto blanco */
+            border: 5px solid var(--borde-nota); /* Azul claro */
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-:root{
-    --primer-color:#F7B733;
-    --segundo-color:#E4660E;
-    --tercer-color: #EFC3A5;
-}
+        .caja-nota h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        /* === Estilo de Ejemplos === */
+        .caja-ejemplo {
+            background-color: var(--color-ejemplo);
+            color: #000000; /* Texto negro para contraste */
+            border: 5px solid var(--borde-ejemplo); /* Naranja */
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .caja-ejemplo h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: #C75000; /* Naranja oscuro */
+        }
+
+        /* === Estilo de Referencias === */
+        .caja-referencia {
+            background-color: var(--color-referencia);
+            color: #000000; /* Texto negro */
+            border: 5px solid var(--borde-referencia); /* Azul claro */
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .caja-referencia h3 {
+            margin-top: 0;
+            font-size: 1.5em;
+            color: var(--borde-referencia); /* Azul claro */
+        }
+    </style>
+</head>
+<body>
+    <h1>Parámetro, Estimador y Estimación</h1>
+
+    <h2>Actividad</h2>
+    <div class="caja-actividad">
+        <h3>Actividad:</h3>
+        <p>Lee el capítulo y responde las preguntas clave en tu cuaderno. Asegúrate de comprender los conceptos básicos antes de continuar.</p>
+    </div>
+
+    <h2>Reto</h2>
+    <div class="caja-reto">
+        <h3>Reto:</h3>
+        <p>Usa lo aprendido para resolver un problema complejo. Aplica las técnicas discutidas y documenta tus hallazgos.</p>
+    </div>
+
+    <h2>Nota</h2>
+    <div class="caja-nota">
+        <h3>Nota:</h3>
+        <p>Esta es una sección para destacar información relevante que los estudiantes deben tener en cuenta.</p>
+    </div>
+
+    <h2>Ejemplo</h2>
+    <div class="caja-ejemplo">
+        <h3>Ejemplo:</h3>
+        <p>Consideremos una muestra de 10 valores: [2, 4, 5, 6, 7, 8, 10, 12, 14, 16]. El estimador de la media es el promedio de los valores:</p>
+        <p><strong>Media:</strong> (2 + 4 + 5 + 6 + 7 + 8 + 10 + 12 + 14 + 16) / 10 = 8.4</p>
+    </div>
+
+    <h2>Referencias</h2>
+    <div class="caja-referencia">
+        <h3>Referencias:</h3>
+        <p>Kolmogorov, A. N. (1933). <em>Foundations of the theory of probability</em>. Chelsea Publishing Company.</p>
+        <p>Fisher, R. A. (1959). <em>Statistical methods and scientific inference</em>. Oliver and Boyd.</p>
+    </div>
+</body>
+</html>
